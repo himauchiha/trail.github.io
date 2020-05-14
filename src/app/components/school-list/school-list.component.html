@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-5">
+        <h3 class="mb-4 col-12 text-center">LIST OF SCHOOLS</h3>
+        <div class="input-group input-group-lg mb-4 col-12">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText">
+        </div>
+        <div *ngFor="let school of schools| search : searchText; let i = index "
+             class="shool-list-item col-12 border-bottom p-3 cursor-pointer" 
+             [ngClass]="{'mt-2 border-top':i == 0, 'mb-2': i == school.length-1}"
+             routerLink = "/uniform/{{school.url}}">
+            {{school.name}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="text-center p-5">
+    <h3>{{"create account"|uppercase}}</h3>
+    <!-- <form action=""> -->
+        <div class="row p-3">
+            <input type="text" 
+                   placeholder="Name" 
+                   name="name" 
+                   class="form-control col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+                   [(ngModel)] ="username">
+        </div>
+        <div class="row p-3">
+            <input type="email" 
+                   placeholder="Email" 
+                   name="emailID" 
+                   class="form-control col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+                   [(ngModel)] ="email">
+        </div>
+        <div class="row p-3">
+            <input type="password" 
+                   placeholder="Password" 
+                   name="password" 
+                   class="form-control col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+                   [(ngModel)] ="password">
+        </div>
+        <div class="row p-3">
+            <input type="password" 
+                   placeholder="Re-Enter Password" 
+                   name="password-confirmation" 
+                   class="form-control col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+                   [(ngModel)] ="reenterPassword">
+        </div>
+        <!-- <div class="row p-3">
+            <div class="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4">
+                <input type="checkbox" 
+                       name="terms" id="" 
+                       class="mr-2"> 
+                <strong>I agree all statements in  <u>Terms of service</u></strong>
+            </div>
+        </div> -->
+        <div class="row p-3">
+            <button class="btn btn-primary col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4"
+                    (click)="registerUser()">
+                Sign Up
+            </button>
+        </div>
+        
+    <!-- </form> -->
+
+    <div class="row p-3">
+        <div class="col-12 col-sm-6 offset-sm-3 col-md-4 offset-md-4">
+            Have already an account? <strong routerLink="/login" class="cursor-pointer"><u>Login Here</u></strong>
+        </div>
+    </div>
+</div>
